@@ -1,0 +1,34 @@
+<table>
+    <tr>
+        <th *ngFor="let r of alldata.GameTypes" (click)="showgames_id(r.Name)">{{r.Name}}  </th>
+    </tr>
+    <tr>
+        <td><input [(ngModel)]="search" (keyup)="GetSearch_id(search)" placeholder="Search Game ID"/></td>
+    </tr>
+    <tbody>
+        <tr>
+            <td *ngFor="let r of all_gamestab;let i=index"><div *ngIf="i<4">{{r}}</div></td>
+        </tr>
+        <tr>
+            <td *ngFor="let r of all_gamestab;let i=index"><div *ngIf="i>=4&&i<8">{{r}}</div></td>
+        </tr>
+        <tr>
+            <td *ngFor="let r of all_gamestab;let i=index"><div *ngIf="i>=8&&i<12">{{r}}</div></td>
+        </tr>
+        <tr>
+            <td *ngFor="let r of all_gamestab;let i=index"><div *ngIf="i>=12&&i<16">{{r}}</div></td>
+        </tr>
+        <tr>
+            <td *ngFor="let r of all_gamestab;let i=index"><div *ngIf="i>=16&&i<20">{{r}}</div></td>
+        </tr>
+        <tr>
+            <td *ngFor="let r of all_gamestab;let i=index"><div *ngIf="i>=20&&i<24">{{r}}</div></td>
+        </tr>
+    </tbody>
+</table>
+<h1 (click)="GetAllIMG()">Games:<br/></h1>
+<input [(ngModel)]="search_game" (keyup)="GetSearchGame(search_game)" placeholder="Search Game"/><br/>
+        <!-- <td *ngFor="let r of allimg_games">{{r}}</td> -->
+        <!-- <div *ngFor="let r of allimg_games"> <img src="r"/></div> -->
+<div class="rows_columns" *ngFor="let r of allimg_games;let i=index" ><span *ngIf="i<6*4"><img  src="{{r.url}}"/> <br/><p>{{r.name}}</p><br/> </span> </div>
+       
