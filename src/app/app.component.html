@@ -1,6 +1,6 @@
 <table>
     <tr>
-        <th *ngFor="let r of alldata.GameTypes" (click)="showgames_id(r.Name)">{{r.Name}}  </th>
+        <th *ngFor="let r of tab_names" (click)="showgames_id(r)">{{r}}  </th><th><img id="sort" (click)="sort_names(tab_names)"  src="https://www.clipartmax.com/png/middle/345-3458535_sort-01-sort-sorting-icon-sort-by-icon-png.png"></th>
     </tr>
     <tr>
         <td><input [(ngModel)]="search" (keyup)="GetSearch_id(search)" placeholder="Search Game ID"/></td>
