@@ -43,7 +43,6 @@ if(this.indexes_games[i]==this.alldata.GameTypes[ii].Order){
       this.allimg_games[i]={url:this.p.APIURL_img+this.alldata.Games[i].ImageID+".jpg",name:this.alldata.Games[i].GameName}
   }
   showgames_id(tabname:string):void{//Show me the all games id in some category is selected
-    alert(tabname)
     this.tab_name=tabname
     for (var i=0;i<this.alldata.GameTypes.length;i++)
     if (this.alldata.GameTypes[i].Name==tabname)
@@ -70,7 +69,6 @@ if(this.indexes_games[i]==this.alldata.GameTypes[ii].Order){
       this.allimg_games=tmp_list
     }
 }
-val_sort:number=0
 sort_names(name_sort:string[]):void{ //Everytime click on sort
 var tmp_list:string[]=[]
 for (let i=0;i<name_sort.length;i++)
